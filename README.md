@@ -34,19 +34,6 @@ DAMIM Delivery Services is a comprehensive delivery solution provider based in Q
 - **Google Fonts**: Poppins and Roboto font families
 - **Google Maps**: Embedded location map
 
-## 📁 Project Structure
-damim-delivery-website/
-│
-├── index.html # Main HTML file
-├── assets/
-│ ├── images/
-│ │ ├── logo.png # Company logo
-│ │ ├── white-logo.png # White version logo for footer
-│ │ ├── dev.png # Hero section illustration
-│ │ └── about-right-dec.png # About section image
-│ └── css/ # Additional CSS files (if any)
-└── README.md # Project documentation
-
 ## 📁 LIve Preview
 
 www.damimdeliveryservices.com
