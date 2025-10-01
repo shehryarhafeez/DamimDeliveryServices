@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="DAMIM Delivery Services - Fast, reliable delivery solutions in Qatar">
+    <meta name="author" content="DAMIM Delivery Services">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>DAMIM Delivery Services - Qatar's Premier Delivery Solution</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c5aa0;
+            --secondary: #f8a01c;
+            --accent: #34c759;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h5, h6 {
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1e3d6f;
+            border-color: #1e3d6f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #d6890a;
+            border-color: #d6890a;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Header Styles */
+        .navbar {
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 70px;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a6b 100%);
+            color: white;
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            border-top: 5px solid var(--primary);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h4 {
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .feature-icon {
+            background-color: rgba(44, 90, 160, 0.1);
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+       
+
+
+     /* CEO Message - Professional Design */
+        .ceo-message {
+            padding: 10px 0;
+            background-color: #ffffff;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-weight: 700;
+            color: #1a1a2e;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .ceo-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            max-width: 100%;
+        }
+        
+        .ceo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 234, 0, 0.12);
+        }
+        
+        .ceo-content {
+            padding: 40px;
+        }
+        
+        .ceo-quote {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .ceo-quote-icon {
+            color: #2c5aa0;
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .ceo-message-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 0;
+        }
+        
+        .ceo-profile {
+            display: flex;
+            align-items: center;
+            padding: 25px 40px;
+            background: linear-gradient(to right, #2c5aa0, #1e3d6f);
+            color: white;
+        }
+        
+        .ceo-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .ceo-details h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .ceo-details p {
+            margin-bottom: 0;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .stats-container {
+            margin-top: 60px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            color: white;
+        }
+        
+        .stat-icon.delivery {
+            background: linear-gradient(135deg, #2c5aa0, #1e3d6f);
+        }
+        
+        .stat-icon.support {
+            background: linear-gradient(135deg, #f8a01c, #e69500);
+        }
+        
+        .stat-icon.satisfaction {
+            background: linear-gradient(135deg, #34c759, #2aa843);
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .ceo-profile {
+                padding: 20px 30px;
+            }
+            
+            .ceo-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .ceo-message {
+                padding: 70px 0;
+            }
+            
+            .stat-card {
+                margin-bottom: 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .ceo-profile {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+            
+            .ceo-avatar {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .ceo-content {
+                padding: 25px;
+            }
+        }
+
+
+
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .contact h2, .contact h5 {
+            color: white;
+        }
+        
+        .contact-info {
+            background: rgba(223, 228, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            height: 100%;
+            color: #f8f9fa;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            color: var(--secondary);
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 400px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2c5aa0;
+            color: #aaa;
+            padding: 80px 0 30px;
+        }
+        
+        .footer h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero {
+                padding: 120px 0 80px;
+                text-align: center;
+            }
+            
+            .service-card {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .ceo-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="DAMIM Delivery Services">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="tel:+97431600480">Call Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Welcome to DAMIM Delivery Services</h1>
+                    <p>Experience fast, reliable, and premium delivery solutions for food, logistics, and visa services across Qatar.</p>
+                    <div class="mt-4">
+                        <a href="#services" class="btn btn-secondary me-3">Our Services</a>
+                        <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="assets/images/dev.png" alt="Delivery Services" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2>Amazing <span style="color: var(--primary);">Services & Features</span> for you in Qatar</h2>
+                    <p class="lead">Comprehensive delivery solutions tailored to meet your personal and business needs.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Logistics</h4>
+                        <p>Ensure that your goods reach their destination safely and on schedule with our professional logistics services.</p>
+                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Food Delivery</h4>
+                        <p>Experience lightning-fast food deliveries with our reliable service—quick, secure, and always on time.</p>
+                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Multiple Hirings</h4>
+                        <p>Offering multiple hiring opportunities across various roles to support Qatar's growing economy.</p>
+                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Available 24/7 to assist with tracking, urgent deliveries and services inquiries whenever you need us.</p>
+                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="about-image">
+                        <img src="assets/images/about-right-dec.png" alt="About DAMIM" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2>About <span style="color: var(--primary);">What We Do</span> & Who We Are</h2>
+                    <p class="my-4">Founded in 2024, DAMIM Delivery Services has grown from a small local delivery service to Qatar's premier logistics and food delivery company. Our commitment to excellence has allowed us to refine our processes and build an unparalleled reputation for reliability.</p>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div>
+                            <h5>Maintenance Solutions</h5>
+                            <p>Comprehensive maintenance support for all our delivery infrastructure.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h5>24/7 Support & Help</h5>
+                            <p>Round-the-clock customer service to address all your delivery needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div>
+                            <h5>Issue Resolution</h5>
+                            <p>Quick and efficient problem-solving for any delivery challenges.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h5>Company Development</h5>
+                            <p>Continuous improvement and expansion to serve you better.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-primary">Get Started Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Message -->
+  
+
+ <section class="ceo-message">
+        <div class="container">
+            <div class="section-header">
+                <h2>Leadership  <span style="color: var(--primary);">Message</span></h2>
+                <p>Hear from our CEO about our commitment to excellence in delivery services</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="ceo-card">
+                        <div class="ceo-profile">
+                            <div class="ceo-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="ceo-details">
+                                <h4>Hamza Qureshi</h4>
+                                <p>Chief Executive Officer, DAMIM Delivery Services</p>
+                            </div>
+                        </div>
+                        <div class="ceo-content">
+                            <div class="ceo-quote">
+                                <i class="fas fa-quote-left ceo-quote-icon"></i>
+                                <p class="ceo-message-text">
+                                    At DAMIM Delivery Services, we believe reliability is the foundation of trust. Since our founding, we have worked tirelessly to deliver not just packages, but peace of mind to our valued customers across Qatar. Our dedicated team and innovative approach ensure that every delivery, big or small, is handled with care, precision, and on-time commitment. As we continue to grow, our focus remains the same: exceeding customer expectations and setting new benchmarks in logistics and food delivery services. Together, we move forward — delivering excellence every step of the way.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-icon delivery">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="stat-number">50,000+</div>
+                            <div class="stat-label">Deliveries Completed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-icon support">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Customer Support</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-icon satisfaction">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-3">Access Us Easily</h2>
+                    <p>Get in touch with our team for all your delivery needs in Qatar</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3608.0946676762405!2d51.41289137538417!3d25.26740067766591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE2JzAyLjYiTiA1McKwMjQnNTUuNyJF!5e0!3m2!1sen!2s!4v1759311728982!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Contact with us</h4>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Our Location</h5>
+                                <p>Doha, Qatar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Phone Number</h5>
+                                <p>+974 1234 5678  (CEO)<br> +92 334 5464822 (Office) <br> +92 331 9578149 (Customer Support) <br>+92 300 5056386 (Management)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email Address</h5>
+                                <p><a href="mailto:damimdeliveryservices786@gmail.com" class="text-white">damimdeliveryservices786@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Office Timings</h5>
+                                <p>Mon to Sun 9am - 5pm <br>Friday off <br>Delivery 24/7 - Always available for your delivery needs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-3">
+                            <h5 class="mb-3">Follow Us</h5>
+                            <div class="d-flex">
+                                <a href="https://www.facebook.com/share/1AqFR1Yome/" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.tiktok.com/@damimdeliveryservices?_t=ZS-90A8Fbwoc1E&_r=1" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-tiktok"></i></a>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="tel:+97431600480" class="btn btn-secondary btn-lg"><i class="fas fa-phone-alt me-2"></i>Call us for delivery: +97431600480</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <h4>About DAMIM</h4>
+                    <p>DAMIM Delivery Services is Qatar's premier logistics and delivery company, providing reliable and efficient services across the country since 2024.</p>
+                    <div class="mt-4">
+                        <a href="https://www.facebook.com/share/1AqFR1Yome/" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@damimdeliveryservices?_t=ZS-90A8Fbwoc1E&_r=1" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-tiktok"></i></a>
+                   
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li>Food Delivery</a></li>
+                        <li>Logistics</a></li>
+                        <li>Multiple Hiring Across Region</a></li>
+                      
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Doha, Qatar</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> +974 1234 5678</li>
+                        <li><i class="fas fa-clock me-2"></i> 24/7 Service</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright © 2025 DAMIM Delivery Services. All Rights Reserved.  <a href="https://www.tiktok.com/@damimdeliveryservices?_t=ZS-90A8Fbwoc1E&_r=1" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-github"></i></a>
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
