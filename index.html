@@ -198,10 +198,8 @@
             margin-right: 15px;
             flex-shrink: 0;
         }
-       
-
-
-     /* CEO Message - Professional Design */
+        
+        /* CEO Message - Professional Design */
         .ceo-message {
             padding: 10px 0;
             background-color: #ffffff;
@@ -238,10 +236,7 @@
             max-width: 100%;
         }
         
-        .ceo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 234, 0, 0.12);
-        }
+    
         
         .ceo-content {
             padding: 40px;
@@ -354,50 +349,71 @@
             font-size: 1rem;
         }
         
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .ceo-profile {
-                padding: 20px 30px;
-            }
-            
-            .ceo-content {
-                padding: 30px;
-            }
+        /* Expanded Hiring Card Styles */
+        .hiring-card {
+            position: relative;
+            overflow: hidden;
         }
         
-        @media (max-width: 768px) {
-            .section-header h2 {
-                font-size: 2rem;
-            }
-            
-            .ceo-message {
-                padding: 70px 0;
-            }
-            
-            .stat-card {
-                margin-bottom: 25px;
-            }
+        .hiring-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            text-align: left;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
         
-        @media (max-width: 576px) {
-            .ceo-profile {
-                flex-direction: column;
-                text-align: center;
-                padding: 25px;
-            }
-            
-            .ceo-avatar {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            
-            .ceo-content {
-                padding: 25px;
-            }
+        .hiring-details.expanded {
+            max-height: 1000px;
         }
-
-
-
+        
+        .hiring-details h5 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .hiring-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .hiring-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .hiring-list li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .read-more-btn {
+            cursor: pointer;
+            color: var(--primary);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more-btn:hover {
+            color: var(--secondary);
+        }
+        
+        .read-more-btn i {
+            transition: transform 0.3s ease;
+            margin-left: 5px;
+        }
+        
+        .read-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
         
         /* Contact Section */
         .contact {
@@ -475,6 +491,49 @@
             text-align: center;
         }
         
+          /* Responsive Design */
+        @media (max-width: 992px) {
+            .ceo-profile {
+                padding: 20px 30px;
+            }
+            
+            .ceo-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .ceo-message {
+                padding: 70px 0;
+            }
+            
+            .stat-card {
+                margin-bottom: 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .ceo-profile {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+            
+            .ceo-avatar {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .ceo-content {
+                padding: 25px;
+            }
+        }
+
+        
         /* Responsive */
         @media (max-width: 991px) {
             .hero h1 {
@@ -504,6 +563,7 @@
                 padding: 30px 20px;
             }
         }
+   
     </style>
 </head>
 
@@ -559,8 +619,6 @@
             </div>
         </div>
     </section>
-
- 
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -623,8 +681,7 @@
         </div>
     </section>
 
-
-   <!-- Services Section -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="row justify-content-center">
@@ -641,7 +698,7 @@
                         </div>
                         <h4>Logistics</h4>
                         <p>Ensure that your goods reach their destination safely and on schedule with our professional logistics services.</p>
-                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                   
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -651,17 +708,33 @@
                         </div>
                         <h4>Food Delivery</h4>
                         <p>Experience lightning-fast food deliveries with our reliable service—quick, secure, and always on time.</p>
-                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                       
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="service-card">
+                    <div class="service-card hiring-card">
                         <div class="service-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
                         <h4>Multiple Hirings</h4>
                         <p>Offering multiple hiring opportunities across various roles to support Qatar's growing economy.</p>
-                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                        <div class="read-more-btn mt-3" onclick="toggleHiringDetails(this)">
+                            Read More <i class="fas fa-chevron-down ms-2"></i>
+                        </div>
+                        <div class="hiring-details">
+                            <h5>Available Positions</h5>
+                            <ul class="hiring-list">
+                                <li>Delivery Drivers - Full-time <br></li>
+                              
+                                <li>Location: Doha, Qatar </li>
+                            </ul>
+                            
+                
+                            
+                            <div class="mt-4">
+                                <a href="#contact" class="btn btn-primary">Apply Now</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -671,19 +744,15 @@
                         </div>
                         <h4>24/7 Support</h4>
                         <p>Available 24/7 to assist with tracking, urgent deliveries and services inquiries whenever you need us.</p>
-                        <a href="#" class="btn btn-link p-0 mt-3">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                       
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <!-- CEO Message -->
-  
-
- <section class="ceo-message">
+    <section class="ceo-message">
         <div class="container">
             <div class="section-header">
                 <h2>Leadership  <span style="color: var(--primary);">Message</span></h2>
@@ -710,8 +779,6 @@
                                 </p>
                             </div>
                         </div>
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -750,7 +817,6 @@
         </div>
     </section>
 
-
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -787,7 +853,7 @@
                             </div>
                             <div>
                                 <h5>Phone Number</h5>
-                                <p>+974 1234 5678  [CEO]<br> +92 334 5464822 [Executive Manager] <br> +92 331 9578149 [Customer Support] <br>+92 300 5056386 [Management]</p>
+                                <p>+974 3160 0480  [CEO]<br> +92 334 5464822 [Executive Manager] <br> +92 331 9578149 [Customer Support] <br>+92 300 5056386 [Management]</p>
                             </div>
                         </div>
                         
@@ -816,15 +882,10 @@
                             <div class="d-flex">
                                 <a href="https://www.facebook.com/share/1AqFR1Yome/" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://www.tiktok.com/@damimdeliveryservices?_t=ZS-90A8Fbwoc1E&_r=1" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-tiktok"></i></a>
-                             
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="tel:+97431600480" class="btn btn-secondary btn-lg"><i class="fas fa-phone-alt me-2"></i>Call us for delivery: +97431600480</a>
             </div>
         </div>
     </section>
@@ -835,15 +896,13 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-5">
                     <h4>About DAMIM</h4>
-                    
-               <a class="navbar-brand" href="index.html">
-                <img src="assets/images/white-logo.png" alt="DAMIM Delivery Services">
-            </a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/white-logo.png" alt="DAMIM Delivery Services">
+                    </a>
                     <p>DAMIM Delivery Services is Qatar's premier logistics and delivery company, providing reliable and efficient services across the country since 2024.</p>
                     <div class="mt-4">
                         <a href="https://www.facebook.com/share/1AqFR1Yome/" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.tiktok.com/@damimdeliveryservices?_t=ZS-90A8Fbwoc1E&_r=1" class="btn btn-outline-light btn-sm me-2"><i class="fab fa-tiktok"></i></a>
-                   
                     </div>
                 </div>
                 
@@ -854,17 +913,15 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
-                    
                     </ul>
                 </div>
                 
                 <div class="col-lg-3 col-md-6 mb-5">
                     <h4>Our Services</h4>
                     <ul class="footer-links list-unstyled">
-                        <li>Food Delivery</a></li>
-                        <li>Logistics</a></li>
-                        <li>Multiple Hiring Across Region</a></li>
-                      
+                        <li>Food Delivery</li>
+                        <li>Logistics</li>
+                        <li>Multiple Hiring Across Region</li>
                     </ul>
                 </div>
                 
@@ -872,16 +929,14 @@
                     <h4>Contact Info</h4>
                     <ul class="footer-links list-unstyled">
                         <li><i class="fas fa-map-marker-alt me-2"></i> Doha, Qatar</li>
-                        <li><i class="fas fa-phone-alt me-2"></i> +974 1234 5678</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> +974 3160 0480</li>
                         <li><i class="fas fa-clock me-2"></i> 24/7 Service</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>Copyright © 2025 DAMIM Delivery Services. All Rights Reserved.  <a href="https://github.com/shehryarhafeez/DamimDeliveryServices/blob/main/README.md"><i class="fab fa-github"></i></a>
-
-                </p>
+                <p>Copyright © 2025 DAMIM Delivery Services. All Rights Reserved.  <a href="https://github.com/shehryarhafeez/DamimDeliveryServices/blob/main/README.md"><i class="fab fa-github"></i></a></p>
             </div>
         </div>
     </footer>
@@ -916,6 +971,22 @@
                 }
             });
         });
+        
+        // Toggle hiring details - Only for the specific hiring card
+        function toggleHiringDetails(button) {
+            const card = button.closest('.hiring-card');
+            const details = card.querySelector('.hiring-details');
+            
+            if (details.classList.contains('expanded')) {
+                details.classList.remove('expanded');
+                button.classList.remove('expanded');
+                button.innerHTML = 'Read More <i class="fas fa-chevron-down ms-2"></i>';
+            } else {
+                details.classList.add('expanded');
+                button.classList.add('expanded');
+                button.innerHTML = 'Read Less <i class="fas fa-chevron-up ms-2"></i>';
+            }
+        }
     </script>
 </body>
 </html>
