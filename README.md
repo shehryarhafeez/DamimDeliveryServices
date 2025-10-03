@@ -38,6 +38,3 @@ DAMIM Delivery Services is a comprehensive delivery solution provider based in Q
 
 www.damimdeliveryservices.com
 
-## 📁 Developed by
-
-Shehryar Hafeez: shehryarhafeez180@gmail.com
